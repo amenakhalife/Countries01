@@ -1,0 +1,20 @@
+<!--<h1>{{name}}</h1>
+<button (click)="test()"> Change my name</button>-->
+
+<div 
+[ngClass]="{'HighPopulation': population >= 10000000, 'LowPopulation' : population < 10000000 }"
+class="card mb-3 mt-3" 
+style="width: 18rem; ">
+    <img [src]="img" style="width: 285px;" height="160px;"  class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{title}}</h5>
+      <p class="card-text">{{region}}</p>
+      <!-- <input type="text" [value]="region">
+      [value] doesn't allow the html file to make changes to the typescript file. [(ngModel)] does !
+      -->
+      <input type="text" class="mb-2" [(ngModel)]="region">
+      <!-- <a *ngIf="region != 'Europe'" class="btn btn-primary" (click)="showPopulation()">Population</a> -->
+      <a  class="btn btn-primary" (click)="showPopulation()">Population</a>
+    </div>
+  </div>
+  
