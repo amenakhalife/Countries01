@@ -4,5 +4,6 @@
 <ak></ak>
 <ak></ak>
 -->
-<searchbar></searchbar>
-<countries></countries>
+<searchbar (searchBtnClicked)="listenToChild($event)"></searchbar>
+<!-- <p>{{writeSearchedCountry}}</p> -->
+<countries [writeCountry]="writeSearchedCountry"></countries>

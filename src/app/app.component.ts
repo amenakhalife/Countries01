@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app01';
+  title = 'Countries';
+  writeSearchedCountry:string= ''; 
+  listenToChild(_countryToSearch: string){
+   //alert(_countryToSearch);
+   this.writeSearchedCountry= _countryToSearch;
+  }
   
 }

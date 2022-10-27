@@ -12,6 +12,7 @@ export class CountryComponent{
  @Input() population:number = 2;
  @Input() region:string = 'description'
  @Input() img:string = 'image'
+ @Input() capital:string='capital'
 
  showPopulation(){
   alert(this.population)

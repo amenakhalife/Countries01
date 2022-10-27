@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input,OnChanges} from '@angular/core';
+import { getAllJSDocTags } from 'typescript';
 import {countryy} from '../classes/countryy'
+import { countrySvc } from '../classes/countryService';
 
 @Component({
   selector: 'countries',
@@ -8,11 +10,20 @@ import {countryy} from '../classes/countryy'
 })
 export class CountriesComponent implements OnInit {
 
+  @Input() writeCountry = '';
   countries: countryy[] =[];
-  constructor(){
+  ngOnInit(){
+   // alert(this.writeCountry)
+      }
+      ngOnChanges(){
+        //alert(this.writeCountry)
+        this.cs.writeCountry= this.writeCountry;
+        this.cs.getData((data:any)=>{this.countries=data})
+      }
+  constructor(private cs: countrySvc){
 //  let p1= new Patient();
 //  p1.name= 'amena';
-//  p1.age ='22';m
+//  p1.age ='22';
 //  p1.img='https://cdn.pixabay.com/photo/2022/09/17/08/47/piano-7460435_960_720.jpg';
 //  this.patients.push(p1);
 
@@ -27,25 +38,6 @@ export class CountriesComponent implements OnInit {
 //  p3.age ='24';
 //  p3.img='https://cdn.pixabay.com/photo/2016/11/08/05/29/surgery-1807541_960_720.jpg';
 //  this.patients.push(p3);
-
-fetch('https://restcountries.com/v3.1/all')
- .then(response => response.json())
- .then(json => {
-   json.forEach((country : any)=> {
-     let c= new countryy();
-     c.name= country.name.common;
-     c.img=country.flags.png;
-     c.region= country.region;
-     c.population= country.population;
-     this.countries.push(c);
-   })
- }
-
- )
-  }
-
-
-  ngOnInit(): void {
-  }
-
+this.cs.getData((data:any)=>{this.countries=data})
+}
 }

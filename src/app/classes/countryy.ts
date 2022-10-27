@@ -4,4 +4,5 @@ export class countryy
     region:string='';
     img:string='';
     population : number= 0;
+    capital:string='';
 }

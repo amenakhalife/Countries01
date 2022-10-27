@@ -7,6 +7,7 @@ import { CountryComponent } from './country/country.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { CountriesComponent } from './countries/countries.component';
 import { FormsModule } from '@angular/forms';
+import { countrySvc } from './classes/countryService';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [countrySvc],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
