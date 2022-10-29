@@ -3,9 +3,10 @@
 
 <div 
 [ngClass]="{'HighPopulation': population >= 10000000, 'LowPopulation' : population < 10000000 }"
-class="card mb-3 mt-3" 
-style="width: 18rem; ">
-    <img [src]="img" style="width: 285px;" height="160px;"  class="card-img-top" alt="...">
+
+class="card mb-3 mt-3" style="max-width: 768px;"  >
+<!-- style="width: 18rem; "> -->
+    <img [src]="img" style="width: 100%;" height="auto"  class="card-img-top" alt="...">
     <div class="card-body">
       <h5  class="card-title">{{title}}</h5>
       <p class="card-text">{{region}}</p>
@@ -15,7 +16,12 @@ style="width: 18rem; ">
       -->
       <!-- <input type="text" class="mb-2" [(ngModel)]="region"> -->
       <!-- <a *ngIf="region != 'Europe'" class="btn btn-primary" (click)="showPopulation()">Population</a> -->
-      <a  class="btn btn-primary" (click)="showPopulation()">Population</a>
+      <!-- <div class="buttonOnIn">
+          <a  role="button" class="btn btn-primary" (click)="showPopulation()">Population</a>
+    </div> -->
+    <div (click)="showPopulation()" class="d-flex justify-content-center align-items-center container" style="height:auto;">
+      <a  class="btn btn-primary" id="screen"> Population
+      </a>
+   </div>
     </div>
   </div>
-  

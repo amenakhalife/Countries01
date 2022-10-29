@@ -1,3 +1,4 @@
+
 .LowPopulation
 {
      border : 2px solid blue; 
@@ -7,3 +8,23 @@
 {
     border: 2px solid red;
 }
+
+/* .buttonOnIn{
+    width: 300px;
+    position: relative;
+}
+
+.button {
+    position: absolute;
+    top: 0;
+    border-radius: 5px;
+    right: 0px;
+    z-index: 2;
+    border: none;
+    top: 2px;
+    height: 30px;
+    cursor: pointer;
+    color: white;
+    background-color: #1e90ff;
+    transform: translateX(2px);
+} */
