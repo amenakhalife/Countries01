@@ -1,16 +1,17 @@
 <!--<h1>{{name}}</h1>
 <button (click)="test()"> Change my name</button>-->
 
-<div 
+<!-- <div 
 [ngClass]="{'HighPopulation': population >= 10000000, 'LowPopulation' : population < 10000000 }"
 
 class="card mb-3 mt-3" style="max-width: 768px;"  >
-<!-- style="width: 18rem; "> -->
-    <img [src]="img" style="width: 100%;" height="auto"  class="card-img-top" alt="...">
+    <img [src]="img" style="width: 100% ; height: 40%"  class="card-img-top" alt="...">
     <div class="card-body">
       <h5  class="card-title">{{title}}</h5>
       <p class="card-text">{{region}}</p>
-      <p  class="card-text">capital :  {{capital}}</p>
+      <p  class="card-text">capital :  {{capital}}</p> -->
+
+
       <!-- <input type="text" [value]="region">
       [value] doesn't allow the html file to make changes to the typescript file. [(ngModel)] does !
       -->
@@ -19,9 +20,32 @@ class="card mb-3 mt-3" style="max-width: 768px;"  >
       <!-- <div class="buttonOnIn">
           <a  role="button" class="btn btn-primary" (click)="showPopulation()">Population</a>
     </div> -->
+
+<!--     
     <div (click)="showPopulation()" class="d-flex justify-content-center align-items-center container" style="height:auto;">
       <a  class="btn btn-primary" id="screen"> Population
       </a>
    </div>
     </div>
+  </div> -->
+
+  <!---->
+  <div 
+  [ngClass]="{'HighPopulation': population >= 10000000, 'LowPopulation' : population < 10000000 }"
+ class="card mb-3 mt-4" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="img" style="width: 100% ; height: 100%"  class="card-img-top" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5  class="card-title">{{title}}</h5>
+      <p class="card-text">{{region}}</p>
+      <p  class="card-text">capital :  {{capital}}</p>
+      <div (click)="showPopulation()" class="d-flex justify-content-center align-items-center container" style="height:auto;">
+        <a  class="btn btn-primary" id="screen"> Population
+        </a>
+        </div>
+    </div>
   </div>
+</div>
