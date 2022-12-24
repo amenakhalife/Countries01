@@ -1,39 +1,10 @@
 <!--<h1>{{name}}</h1>
 <button (click)="test()"> Change my name</button>-->
 
-<!-- <div 
-[ngClass]="{'HighPopulation': population >= 10000000, 'LowPopulation' : population < 10000000 }"
-
-class="card mb-3 mt-3" style="max-width: 768px;"  >
-    <img [src]="img" style="width: 100% ; height: 40%"  class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5  class="card-title">{{title}}</h5>
-      <p class="card-text">{{region}}</p>
-      <p  class="card-text">capital :  {{capital}}</p> -->
-
-
-      <!-- <input type="text" [value]="region">
-      [value] doesn't allow the html file to make changes to the typescript file. [(ngModel)] does !
-      -->
-      <!-- <input type="text" class="mb-2" [(ngModel)]="region"> -->
-      <!-- <a *ngIf="region != 'Europe'" class="btn btn-primary" (click)="showPopulation()">Population</a> -->
-      <!-- <div class="buttonOnIn">
-          <a  role="button" class="btn btn-primary" (click)="showPopulation()">Population</a>
-    </div> -->
-
-<!--     
-    <div (click)="showPopulation()" class="d-flex justify-content-center align-items-center container" style="height:auto;">
-      <a  class="btn btn-primary" id="screen"> Population
-      </a>
-   </div>
-    </div>
-  </div> -->
-
-  <!---->
   <div 
   [ngClass]="{'HighPopulation': population >= 10000000, 'LowPopulation' : population < 10000000 }"
  class="card mb-3 mt-4" style="max-width: 540px;">
-    <div class="row g-0">
+    <div class="row g-0" id="country1.1">
       <div class="col-md-4">
         <img [src]="img" style="width: 100% ; height: 100%"  class="card-img-top" alt="...">
       </div>

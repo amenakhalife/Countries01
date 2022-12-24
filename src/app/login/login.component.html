@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-7">
+        
+        <form>
+            <!-- Email input -->
+            <div class="form-group  mb-2 mt-4">
+                <!-- <label>Primary Email:</label> -->
+         <!-- <input [class.is-invalid] = "userEmails.get('primaryEmail').invalid && userEmails.get('primaryEmail').touched"
+	type="email" class="form-control" formControlName="primaryEmail" /> -->
+    <input type="email" class="form-control" placeholder="Email Address" />
+
+
+              <label class="form-label" for="form2Example1"></label> 
+            </div>
+          
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" id="form2Example2" class="form-control" placeholder="Password" />
+              <label class="form-label" for="form2Example2"></label>
+            </div>
+          
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+              <div class="col d-flex justify-content-center">
+                <!-- Checkbox -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                  <label class="form-check-label" for="form2Example31"> Remember me </label>
+                </div>
+               </div>
+          
+              <div class="col">
+                <!-- Simple link -->
+                <a href="#!">Forgot password?</a>
+             </div>
+            
+          
+            <!-- Submit button -->
+            <button type="button" class="btn btn-primary btn-block mb-4" (click)="fakeLogin()">Sign in</button>
+          </div>
+            <!-- Register buttons -->
+            <div class="text-center">
+              <p>Not a member? <a href="#!">Register</a></p>
+              <!-- <p>or sign up with:</p>
+        
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+          
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-google"></i>
+              </button>
+          
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-twitter"></i>
+              </button>
+          
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-github"></i>
+              </button> -->
+            </div>
+          
+    <div class="col-3"></div>
